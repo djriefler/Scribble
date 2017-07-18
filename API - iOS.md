@@ -46,6 +46,7 @@ Event occurs when the license key verification fails.
 	func didLicenseVerificationFailed(_ error: NSError) 
 
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *error* | **NSError**  | The reason for failure. |
@@ -56,6 +57,7 @@ Event occurs when server communication fails while attempting to verify the lice
 	func didServerCommunicationFailed(_ error: NSError)
 
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *error* | **NSError**  | The reason for failure. |
@@ -66,7 +68,7 @@ Event occurs when the peripheral has been found.
 	func didDiscoverPeripheral()
 
 ### didConnectToPeripheral
-Event occurs when the service is discovered and the device is connected.
+Event occurs when the iOS device is connected to the peripheral.
 
     func didConnectToPeripheral()
 
@@ -76,21 +78,24 @@ Event occurs when the peripheral is disconnected.
     func didDisconnectPeripheral()
 
 ### didFailToConnectWithBlueTooth
-Event occurs when Bluetooth is found disabled
+Event occurs when Bluetooth is found disabled.
 
     func didFailToConnectWithBlueTooth(_ error: NSError)
+    
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *error* | **NSError**  | The reason for failure. |
 
 
 ### didPeripheralCaptured 
-Event occurs when the peripheral captures a new color
+Event occurs when the peripheral captures a new color.
 
 	func didPeripheralCaptured (_ color: UIColor)
 	
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *color* | **UIColor**  | The color that the peripheral captured. |
@@ -101,15 +106,17 @@ Event occurs when the peripheral returns its current battery level.
 	func didPeripheralIndicated(_ batteryLevel: Int)
 
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
-| *batteryLevel* | **Int**  | The current battery level value. Value ranges from 0-100 |
+| *batteryLevel* | **Int**  | The current battery level value. Value ranges from 0-100. |
 
 ### didPeripheralSensed
 Event occurs when the peripheral returns the current proximity value.
 
 	func didPeripheralSensed(_ proximityValue: Int)
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *proximityValue* | **Int**  | The current bluetooth proximity value. Value ranges from around 30-97 where 30 is nearest proximity value. |
@@ -120,6 +127,7 @@ Event occurs when the peripheral returns the currently connected device's genera
 	func didPeripheralProvided(_ deviceName: String, deviceUdid: String)
 
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *deviceName* | **String**  | Name of the currently connected device. |
@@ -136,6 +144,7 @@ Register delegate for the ScribbleManager.
 	static func registerScribbleManager(with object: ScribbleProtocols, registeredLicenseKey: String)
 
 **Parameters**:
+
 | Attribute | Type | Description |
 | ------- | ------------ | ------------ |
 | *object* | **ScribbleProtocol**  | The delegate listener that will receive callbacks from the peripheral |
