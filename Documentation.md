@@ -1,7 +1,7 @@
 
 
 
-# Scribble API Documentation
+# Scribble Documentation
 
 ## Table Of Contents
 <!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
