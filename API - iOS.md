@@ -145,13 +145,13 @@ Register delegate for the ScribbleManager.
 
 **Parameters**:
 
-| Attribute | Type | Description |
-| ------- | ------------ | ------------ |
-| *object* | **ScribbleProtocol**  | The delegate listener that will receive callbacks from the peripheral |
-| *registeredLicenseKey* | **String**  | License key that will be used for verification. |
+| Attribute | Type | Required | Description |
+| ------- | ------------ | ------------ | ------------ |
+| *object* | **ScribbleProtocol**  | Yes | The delegate listener that will receive callbacks from the peripheral |
+| *registeredLicenseKey* | **String**  | Yes | License key that will be used for verification. |
 	
 ### unRegisterScribbleManager
-UnRegister delegate for ScribbleManager.
+Unregister delegate for ScribbleManager.
      
 	static func unRegisterScribbleManager()
 
