@@ -30,7 +30,7 @@
 <!-- /TOC -->
 
 ## ScribbleProtocol
-Protocol that receives messages sent from the Scribble device. It offers the following optional stubs: 
+Protocol that receives messages sent from the Scribble SDK. It offers the following optional stubs: 
 
 Note: **peripheral** refers to the Scribble device that your app is interacting with.
 
