@@ -167,17 +167,17 @@ Stop pairing device with Scribble device.
 
 ### requestScribbleDeviceBatteryInfo
 
-Request connected device's battery level. Will invoke [didPeripheralIndicated](#didPeripheralIndicated).
+Request connected device's battery level. Will invoke [didPeripheralIndicated](#didperipheralindicated).
  
 	static func requestScribbleDeviceBatteryInfo()
 
 ### requestScribbleDeviceProximityInfo
 
-Request connected device's proximity value.  Will invoke [didPeripheralSensed](#didPeripheralSensed).
+Request connected device's proximity value.  Will invoke [didPeripheralSensed](#didperipheralsensed).
 
 	static func requestScribbleDeviceProximityInfo()
 
 ### requestScribbleDeviceGeneralInfo
-Request connected device's information (currently device's name and UDID). Will invoke [didPeripheralProvided](#didPeripheralProvided).
+Request connected device's information (currently device's name and UDID). Will invoke [didPeripheralProvided](#didperipheralprovided).
  
 	static func requestScribbleDeviceGeneralInfo()
