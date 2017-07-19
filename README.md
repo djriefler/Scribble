@@ -34,18 +34,21 @@ ScribbleKit is now ready to use!
 
 The Scribble SDK acts a middleman between the consumer app and the Scribble Pen / Stylus.
 
-Scribble provides two classes to communicate with the Scribble SDK: ScribbleProtocol and ScribbleManager
-**ScribbleProtocol** is a protocol that receives event callbacks from the Scribble SDK. It has offers a list of optional stub methods that can be implemented to receive updates when things like registration, device pairing or color capturing occur. A full list of events can be found in the [iOS API](#API-iOS).
+Scribble provides two classes to communicate with the Scribble SDK:
 
-**ScribbleManager** is a class with static methods that can be called directly to interact with the Scribble SDK. ScribbleManager is used to verify your license key, initiate pairing with and request information from a Scribble Device. A full list of ScribbleManager functions can be found in the [iOS API](#API-iOS).
+**ScribbleProtocol** is a protocol that receives event callbacks from the Scribble SDK. It has offers a list of optional stub methods that can be implemented to receive updates when things like registration, device pairing or color capturing occur. A full list of events can be found in the [Documentation](#documentation).
 
-### Quick Start
+**ScribbleManager** is a class with static methods that can be called directly to interact with the Scribble SDK. ScribbleManager is used to verify your license key, initiate pairing with and request information from a Scribble Device. A full list of ScribbleManager functions can be found in the [Documentation](#documentation).
+
+## Example Usage
+
+### Quick Integration
 
 First, import ScribbleKit into your source code:
 
     import ScribbleKit
 
-Next have your delegate conform to the ScribbleProtocol and implement the ScribbleProtocol methods you would like to receive callbacks for. Here we implement didPeripheralCaptured so that we can receive color information and store it in a variable:
+Next, have your delegate conform to the ScribbleProtocol and implement the ScribbleProtocol methods you would like to receive callbacks for. Here we implement didPeripheralCaptured so that we can receive color information and store it in a variable:
 
     class MyDelegateClass: NSObject, ScribbleProtocol {
        var myColor: UIColor?
