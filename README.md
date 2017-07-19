@@ -16,16 +16,22 @@ Please also note that both a Scribble Pen / Stylus and an iOS device are require
 
 ### Manual Integration
 1. Copy the ScribbleKit.framework file into the project directory of your application.
+
 ![screenshot 1](/Screenshots/add_to_directory.png?raw=true)
 2.	In XCode, click File -> Add Files to "YourProjectName"...
+
 ![screenshot 2](/Screenshots/add_files.png?raw=true)
-3. Select ScribbleKit.framework and click "Add"
+3. Select ScribbleKit.framework and click "Add".
+
 ![screenshot 3](/Screenshots/select_framework.png?raw=true)
-4. Select the 'General' tab and verify the ScribbleKit.framework file is copied to the sidebar on the left and to the ‘Linked Frameworks and Libraries’ section
+4. Select the 'General' tab and verify the ScribbleKit.framework file is copied to the sidebar on the left and to the ‘Linked Frameworks and Libraries’ section.
+
 ![screenshot 4](/Screenshots/added_to_project.png?raw=true)
-5.	Click the '+' in the ‘Embedded Binaries’ section, select ScribbleKit.framework and click 'Add'
+5.	Click the '+' in the ‘Embedded Binaries’ section, select ScribbleKit.framework and click 'Add'.
+
 ![screenshot 5](/Screenshots/add_to_embedded_binaries.png?raw=true)
 6.	Make sure that the ScribbleKit.framework file is copied to both the 'Embedded Binaries' and ‘Linked Frameworks and Libraries’ sections.
+
 ![screenshot 6](/Screenshots/final_state.png?raw=true)
 
 ScribbleKit is now ready to use!
@@ -39,6 +45,9 @@ Scribble provides two classes to communicate with the Scribble SDK:
 **ScribbleProtocol** is a protocol that receives event callbacks from the Scribble SDK. It has offers a list of optional stub methods that can be implemented to receive updates when things like registration, device pairing or color capturing occur. A full list of events can be found in the [Documentation](Documentation.md).
 
 **ScribbleManager** is a class with static methods that can be called directly to interact with the Scribble SDK. ScribbleManager is used to verify your license key, initiate pairing with and request information from a Scribble Device. A full list of ScribbleManager functions can be found in the [Documentation](Documentation.md).
+
+### Workflow
+![screenshot 6](/Screenshots/scribble_workflow.png?raw=true)
 
 ## Example Usage
 
