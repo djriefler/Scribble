@@ -61,10 +61,10 @@ Next, ScribbleManager must register the delegate and pass a license key for veri
 
     ScribbleManager.registerScribbleManager(with: myClassInstance, registeredLicenseKey: "abcdefg")
    
-Next, implement didLicenseVerificationSucceed() in your delegate and call ScribbleManager.startPairing() to begin pairing with the Scribble Pen / Stylus upon successful license verification.
+Next, implement didLicenseVerificationSucceed() in your delegate and call ScribbleManager.startDevicePairing() to begin pairing with the Scribble Pen / Stylus upon successful license verification.
       
     func didLicenseVerificationSucceed() {
-       ScribbleManager.startPairing()
+       ScribbleManager.startDevicePairing()
     }
 
 Once the Scribble Pen / Stylus has been paired with the iOS device, the class implementing the ScribbleProtocol will receive updates whenever the Scribble device captures a new color!
