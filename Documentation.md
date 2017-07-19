@@ -161,7 +161,7 @@ Begin pairing with Scribble device.
 	static func startDevicePairing()
 
 ### stopPairingDevice
-Stop pairing device with Scribble device.
+Stop pairing with Scribble device.
 
 	static func stopPairingDevice()
 
