@@ -16,12 +16,17 @@ Please also note that both a Scribble Pen / Stylus and an iOS device are require
 
 ### Manual Integration
 1. Copy the ScribbleKit.framework file into the project directory of your application.
-2.	Add the framework to the project structure by clicking adding framework file from the project directory.
-3.	Open the application target and select the 'General' tab.
-4.	Drag and drop ScribbleKit.framework to the ‘Embedded Binaries’ section.
-5.	Make sure that the ScribbleKit.framework file is copied to ‘Linked Frameworks and Libraries’ section too (As shown in the screenshot below).
-
-![enter image description here](https://lh3.googleusercontent.com/-L_vP4VTD7iQ/WW01S1lsDhI/AAAAAAAAAc0/0dyWy9wnBcoFRnihMLeFxNqg0KAsSc9BgCLcBGAs/s0/ScribbleManualIntegration.png "ScribbleManualIntegration.png")
+![screenshot 1](/Screenshots/add_to_directory.png?raw=true)
+2.	In XCode, click File -> Add Files to "YourProjectName"...
+![screenshot 2](/Screenshots/add_files.png?raw=true)
+3. Select ScribbleKit.framework and click "Add"
+![screenshot 3](/Screenshots/select_framework.png?raw=true)
+4. Select the 'General' tab and verify the ScribbleKit.framework file is copied to the sidebar on the left and to the ‘Linked Frameworks and Libraries’ section
+![screenshot 4](/Screenshots/added_to_project.png?raw=true)
+5.	Click the '+' in the ‘Embedded Binaries’ section, select ScribbleKit.framework and click 'Add'
+![screenshot 5](/Screenshots/add_to_embedded_binaries.png?raw=true)
+6.	Make sure that the ScribbleKit.framework file is copied to both the 'Embedded Binaries' and ‘Linked Frameworks and Libraries’ sections.
+![screenshot 6](/Screenshots/final_state.png?raw=true)
 
 ScribbleKit is now ready to use!
 
@@ -41,6 +46,11 @@ First, import ScribbleKit into your source code:
 
     import ScribbleKit
 
+
+Next, ScribbleManager must register the delegate and pass a license key for verification:
+
+    ScribbleManager.registerScribbleManager(with: myClassInstance, registeredLicenseKey: "abcdefg")
+   
 Next have one of your classes conform to the ScribbleProtocol and implement the ScribbleProtocol methods you would like to receive callbacks for. Here we implement didPeripheralCaptured so that we can receive color information and store it in a variable:
 
     class MyClass: NSObject, ScribbleProtocol {
@@ -50,10 +60,7 @@ Next have one of your classes conform to the ScribbleProtocol and implement the 
        }
     }
 
-Next, ScribbleManager must register the class and pass a license key for verification:
-
-    ScribbleManager.registerScribbleManager(with: myClassInstance, registeredLicenseKey: "abcdefg")
-    
+If the license key verification is successful, the callback function didLicenseVerificationSucceed() will be called so lets add that
 To initiate pairing with the Scribble Pen or Stylus:
 
     ScribbleManager.startPairing()
