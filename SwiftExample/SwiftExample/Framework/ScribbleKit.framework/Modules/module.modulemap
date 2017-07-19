@@ -1,0 +1,10 @@
+framework module ScribbleKit {
+  umbrella header "ScribbleKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ScribbleKit.Swift {
+    header "ScribbleKit-Swift.h"
+}

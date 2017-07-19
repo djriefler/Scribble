@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-Rx-CiL">
+                                <rect key="frame" x="67" y="82" width="240" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startPairingClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehb-Qu-es9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVp-iI-EFB">
+                                <rect key="frame" x="67" y="234" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="wG8-6k-VGK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HQ-1h-yAD">
+                                <rect key="frame" x="67" y="135" width="109" height="30"/>
+                                <state key="normal" title="Get Battery Info"/>
+                                <connections>
+                                    <action selector="getDeviceBatteryInfoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQo-8q-VoV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-Zb-FVk">
+                                <rect key="frame" x="199" y="135" width="108" height="30"/>
+                                <state key="normal" title="Get Proximity"/>
+                                <connections>
+                                    <action selector="getDeviceProximityInfoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yht-xt-YUz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj5-ck-Imh">
+                                <rect key="frame" x="67" y="186" width="240" height="30"/>
+                                <state key="normal" title="Get Device Info"/>
+                                <connections>
+                                    <action selector="getDeviceGeneralInfoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fls-Vf-m7t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mVp-iI-EFB" secondAttribute="trailing" constant="68" id="3c0-zW-K3t"/>
+                            <constraint firstItem="2HQ-1h-yAD" firstAttribute="top" secondItem="GlH-Rx-CiL" secondAttribute="bottom" constant="23" id="91r-67-Qcc"/>
+                            <constraint firstAttribute="trailing" secondItem="4iD-Zb-FVk" secondAttribute="trailing" constant="68" id="Bq2-0B-dp1"/>
+                            <constraint firstItem="mVp-iI-EFB" firstAttribute="top" secondItem="4iD-Zb-FVk" secondAttribute="bottom" constant="69" id="DsQ-bV-3Hc"/>
+                            <constraint firstItem="mVp-iI-EFB" firstAttribute="top" secondItem="2HQ-1h-yAD" secondAttribute="bottom" constant="69" id="H26-Wc-8ma"/>
+                            <constraint firstItem="cj5-ck-Imh" firstAttribute="top" secondItem="4iD-Zb-FVk" secondAttribute="bottom" constant="21" id="HFu-mu-L1R"/>
+                            <constraint firstAttribute="trailing" secondItem="cj5-ck-Imh" secondAttribute="trailing" constant="68" id="JOQ-a7-W1N"/>
+                            <constraint firstItem="GlH-Rx-CiL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="LY3-JC-Gfc"/>
+                            <constraint firstItem="4iD-Zb-FVk" firstAttribute="leading" secondItem="2HQ-1h-yAD" secondAttribute="trailing" constant="23" id="QZ4-wY-DRn"/>
+                            <constraint firstItem="4iD-Zb-FVk" firstAttribute="top" secondItem="GlH-Rx-CiL" secondAttribute="bottom" constant="23" id="SNA-Wu-Xr7"/>
+                            <constraint firstItem="mVp-iI-EFB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="VQb-1v-rj0"/>
+                            <constraint firstItem="GlH-Rx-CiL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="VS4-6S-Wac"/>
+                            <constraint firstItem="cj5-ck-Imh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="Yii-k7-KiX"/>
+                            <constraint firstItem="2HQ-1h-yAD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="iif-r0-FAC"/>
+                            <constraint firstItem="mVp-iI-EFB" firstAttribute="top" secondItem="cj5-ck-Imh" secondAttribute="bottom" constant="18" id="p1O-ri-WQ1"/>
+                            <constraint firstItem="mVp-iI-EFB" firstAttribute="top" secondItem="GlH-Rx-CiL" secondAttribute="bottom" constant="122" id="xCt-P7-S3C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GlH-Rx-CiL" secondAttribute="trailing" constant="52" id="z0F-2g-ks1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBatteryLife" destination="2HQ-1h-yAD" id="NSW-9s-39D"/>
+                        <outlet property="btnDeviceInfo" destination="cj5-ck-Imh" id="8T4-gP-cu9"/>
+                        <outlet property="btnPairDevice" destination="GlH-Rx-CiL" id="6UA-Pg-sRZ"/>
+                        <outlet property="btnProximity" destination="4iD-Zb-FVk" id="cPM-bA-CoL"/>
+                        <outlet property="viewColor" destination="mVp-iI-EFB" id="1Z3-mO-TI7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
