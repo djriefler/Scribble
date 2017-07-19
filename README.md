@@ -36,9 +36,9 @@ The Scribble SDK acts a middleman between the consumer app and the Scribble Pen 
 
 Scribble provides two classes to communicate with the Scribble SDK:
 
-**ScribbleProtocol** is a protocol that receives event callbacks from the Scribble SDK. It has offers a list of optional stub methods that can be implemented to receive updates when things like registration, device pairing or color capturing occur. A full list of events can be found in the [Documentation](#documentation).
+**ScribbleProtocol** is a protocol that receives event callbacks from the Scribble SDK. It has offers a list of optional stub methods that can be implemented to receive updates when things like registration, device pairing or color capturing occur. A full list of events can be found in the [Documentation](../Documentation.md).
 
-**ScribbleManager** is a class with static methods that can be called directly to interact with the Scribble SDK. ScribbleManager is used to verify your license key, initiate pairing with and request information from a Scribble Device. A full list of ScribbleManager functions can be found in the [Documentation](#documentation).
+**ScribbleManager** is a class with static methods that can be called directly to interact with the Scribble SDK. ScribbleManager is used to verify your license key, initiate pairing with and request information from a Scribble Device. A full list of ScribbleManager functions can be found in the [Documentation](../Documentation.md).
 
 ## Example Usage
 
